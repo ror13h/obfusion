@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "obfusion", "obfusion.vcproj", "{86F003CF-26C8-4146-8377-22088E734629}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "example01", "examples\example01\example01.vcproj", "{5BA6C3D3-8C25-4246-87DA-3EFBEE4E6982}"
+	ProjectSection(ProjectDependencies) = postProject
+		{86F003CF-26C8-4146-8377-22088E734629} = {86F003CF-26C8-4146-8377-22088E734629}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{86F003CF-26C8-4146-8377-22088E734629}.Debug|Win32.ActiveCfg = Debug|Win32
+		{86F003CF-26C8-4146-8377-22088E734629}.Debug|Win32.Build.0 = Debug|Win32
+		{86F003CF-26C8-4146-8377-22088E734629}.Release|Win32.ActiveCfg = Release|Win32
+		{86F003CF-26C8-4146-8377-22088E734629}.Release|Win32.Build.0 = Release|Win32
+		{5BA6C3D3-8C25-4246-87DA-3EFBEE4E6982}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5BA6C3D3-8C25-4246-87DA-3EFBEE4E6982}.Debug|Win32.Build.0 = Debug|Win32
+		{5BA6C3D3-8C25-4246-87DA-3EFBEE4E6982}.Release|Win32.ActiveCfg = Release|Win32
+		{5BA6C3D3-8C25-4246-87DA-3EFBEE4E6982}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

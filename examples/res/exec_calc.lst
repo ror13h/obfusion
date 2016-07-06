@@ -1,0 +1,148 @@
+seg000:00000000
+seg000:00000000			.686p
+seg000:00000000			.mmx
+seg000:00000000			.model flat
+seg000:00000000
+seg000:00000000	; ===========================================================================
+seg000:00000000
+seg000:00000000	; Segment type:	Pure code
+seg000:00000000	seg000		segment	byte public 'CODE' use32
+seg000:00000000			assume cs:seg000
+seg000:00000000			assume es:nothing, ss:nothing, ds:nothing, fs:nothing, gs:nothing
+seg000:00000000			cld
+seg000:00000001			call	sub_88
+seg000:00000001	; ---------------------------------------------------------------------------
+seg000:00000006			db  60h	; `
+seg000:00000007			db  89h	; ‰
+seg000:00000008			db 0E5h	; å
+seg000:00000009			db  31h	; 1
+seg000:0000000A			db 0C0h	; À
+seg000:0000000B			db  64h	; d
+seg000:0000000C			db  8Bh	; ‹
+seg000:0000000D			db  50h	; P
+seg000:0000000E			db  30h	; 0
+seg000:0000000F			db  8Bh	; ‹
+seg000:00000010			db  52h	; R
+seg000:00000011			db  0Ch
+seg000:00000012			db  8Bh	; ‹
+seg000:00000013			db  52h	; R
+seg000:00000014			db  14h
+seg000:00000015	; ---------------------------------------------------------------------------
+seg000:00000015
+seg000:00000015	loc_15:					; CODE XREF: seg000:00000086j
+seg000:00000015			mov	esi, [edx+28h]
+seg000:00000018			movzx	ecx, word ptr [edx+26h]
+seg000:0000001C			xor	edi, edi
+seg000:0000001E
+seg000:0000001E	loc_1E:					; CODE XREF: seg000:0000002Aj
+seg000:0000001E			lodsb
+seg000:0000001F			cmp	al, 61h	; 'a'
+seg000:00000021			jl	short loc_25
+seg000:00000023			sub	al, 20h	; ' '
+seg000:00000025
+seg000:00000025	loc_25:					; CODE XREF: seg000:00000021j
+seg000:00000025			ror	edi, 0Dh
+seg000:00000028			add	edi, eax
+seg000:0000002A			loop	loc_1E
+seg000:0000002C			push	edx
+seg000:0000002D			push	edi
+seg000:0000002E			mov	edx, [edx+10h]
+seg000:00000031			mov	ecx, [edx+3Ch]
+seg000:00000034			mov	ecx, [ecx+edx+78h]
+seg000:00000038			jecxz	short loc_82
+seg000:0000003A			add	ecx, edx
+seg000:0000003C			push	ecx
+seg000:0000003D			mov	ebx, [ecx+20h]
+seg000:00000040			add	ebx, edx
+seg000:00000042			mov	ecx, [ecx+18h]
+seg000:00000045
+seg000:00000045	loc_45:					; CODE XREF: seg000:0000005Fj
+seg000:00000045			jecxz	short loc_81
+seg000:00000047			dec	ecx
+seg000:00000048			mov	esi, [ebx+ecx*4]
+seg000:0000004B			add	esi, edx
+seg000:0000004D			xor	edi, edi
+seg000:0000004F
+seg000:0000004F	loc_4F:					; CODE XREF: seg000:00000057j
+seg000:0000004F			lodsb
+seg000:00000050			ror	edi, 0Dh
+seg000:00000053			add	edi, eax
+seg000:00000055			cmp	al, ah
+seg000:00000057			jnz	short loc_4F
+seg000:00000059			add	edi, [ebp-8]
+seg000:0000005C			cmp	edi, [ebp+24h]
+seg000:0000005F			jnz	short loc_45
+seg000:00000061			pop	eax
+seg000:00000062			mov	ebx, [eax+24h]
+seg000:00000065			add	ebx, edx
+seg000:00000067			mov	cx, [ebx+ecx*2]
+seg000:0000006B			mov	ebx, [eax+1Ch]
+seg000:0000006E			add	ebx, edx
+seg000:00000070			mov	eax, [ebx+ecx*4]
+seg000:00000073			add	eax, edx
+seg000:00000075			mov	[esp+24h], eax
+seg000:00000079			pop	ebx
+seg000:0000007A			pop	ebx
+seg000:0000007B			popa
+seg000:0000007C			pop	ecx
+seg000:0000007D			pop	edx
+seg000:0000007E			push	ecx
+seg000:0000007F			jmp	eax
+seg000:00000081	; ---------------------------------------------------------------------------
+seg000:00000081
+seg000:00000081	loc_81:					; CODE XREF: seg000:loc_45j
+seg000:00000081			pop	edi
+seg000:00000082
+seg000:00000082	loc_82:					; CODE XREF: seg000:00000038j
+seg000:00000082			pop	edi
+seg000:00000083			pop	edx
+seg000:00000084			mov	edx, [edx]
+seg000:00000086			jmp	short loc_15
+seg000:00000088
+seg000:00000088	; =============== S U B	R O U T	I N E =======================================
+seg000:00000088
+seg000:00000088	; Attributes: noreturn
+seg000:00000088
+seg000:00000088	sub_88		proc near		; CODE XREF: seg000:00000001p
+seg000:00000088			pop	ebp
+seg000:00000089			push	1
+seg000:0000008B			jmp	short loc_B3
+seg000:0000008B	sub_88		endp
+seg000:0000008B
+seg000:0000008D
+seg000:0000008D	; =============== S U B	R O U T	I N E =======================================
+seg000:0000008D
+seg000:0000008D	; Attributes: noreturn
+seg000:0000008D
+seg000:0000008D	sub_8D		proc near		; CODE XREF: sub_8D:loc_B3p
+seg000:0000008D			push	876F8B31h
+seg000:00000092			call	ebp
+seg000:00000094			mov	ebx, 56A2B5F0h
+seg000:00000099			push	9DBD95A6h
+seg000:0000009E			call	ebp
+seg000:000000A0			cmp	al, 6
+seg000:000000A2			jl	short loc_AE
+seg000:000000A4			cmp	bl, 0E0h
+seg000:000000A7			jnz	short loc_AE
+seg000:000000A9			mov	ebx, 6F721347h
+seg000:000000AE
+seg000:000000AE	loc_AE:					; CODE XREF: sub_8D+15j
+seg000:000000AE						; sub_8D+1Aj
+seg000:000000AE			push	0
+seg000:000000B0			push	ebx
+seg000:000000B1			call	ebp
+seg000:000000B3
+seg000:000000B3	loc_B3:					; CODE XREF: sub_88+3j
+seg000:000000B3			call	sub_8D
+seg000:000000B3	sub_8D		endp
+seg000:000000B3
+seg000:000000B3	; ---------------------------------------------------------------------------
+seg000:000000B8			db  63h	; c
+seg000:000000B9			db  61h	; a
+seg000:000000BA			db  6Ch	; l
+seg000:000000BB			db  63h	; c
+seg000:000000BC			db    0
+seg000:000000BC	seg000		ends
+seg000:000000BC
+seg000:000000BC
+seg000:000000BC			end
