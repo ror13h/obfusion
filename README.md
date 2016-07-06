@@ -25,6 +25,12 @@ Makefiles for Linux are coming soon(ish).
 
 See `examples/` directory to learn how to implement this library in your own projects.
 
+# Demo
+
+Here is the disassembled sample shellcode that spawns `calc.exe` in original form: [original shellcode](https://raw.githubusercontent.com/kgretzky/obfusion/master/examples/res/exec_calc.lst)
+
+And here is the disassembly of the same sample shellcode after the 3-pass obfuscation process: [obfuscated shellcode](https://raw.githubusercontent.com/kgretzky/obfusion/master/examples/res/output.lst)
+
 # External libraries
 
 Hacker Disassembler Engine 32/64
